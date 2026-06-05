@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Practice Day 1</title>
+</head>
+<body>
+
+  <h1 id="greeting"></h1>
+
+  <script>
+    // Exercise 1 — 5 variables of different types
+    const name = "Manjot";
+    const age = 18;
+    const isStudent = true;
+    const score = 9.5;
+    let city = "Delta";
+
+    console.log(typeof name);      // string
+    console.log(typeof age);       // number
+    console.log(typeof isStudent); // boolean
+    console.log(typeof score);     // number
+    console.log(typeof city);      // string
+
+    // Exercise 2 — two numbers calculator
+    const a = Number(prompt("Enter first number"));
+    const b = Number(prompt("Enter second number"));
+
+    alert("Sum: " + (a + b));
+    alert("Difference: " + (a - b));
+    alert("Product: " + (a * b));
+    alert("Quotient: " + (a / b));
+
+    // Exercise 3 — template literal greeting
+    const userName = prompt("What is your name?");
+    const message = `Hello, ${userName}! Welcome to Scandium.`;
+    document.getElementById("greeting").textContent = message;
+    console.log(message);
+
+    // Exercise 4 — age classifier
+    const userAge = Number(prompt("How old are you?"));
+
+    if (userAge < 13) {
+      console.log("child");
+    } else if (userAge < 20) {
+      console.log("teen");
+    } else if (userAge < 65) {
+      console.log("adult");
+    } else {
+      console.log("senior");
+    }
+
+  </script>
+
+</body>
+</html>
