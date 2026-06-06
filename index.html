@@ -10,18 +10,31 @@
   <p id="age"></p>
 
   <script> {
-    function isLeapYear(year) {
-        if (year % 400 === 0) {return true}
-        if (year % 100 === 0) {return false}
-        if (year % 4 === 0) {return true}
-        return false
+    const numb = Number(prompt("Enter a number:"));
 
-    
-    
+    function fizzbuzz(n){
+      for (let i = 1;i<= n; i++){
+        if (i % 15 === 0 ){
+          console.log('FizzBuzz')
+          }
+        else if (i % 5 === 0){
+          console.log('Buzz')
+          }
+        else if (i % 3 === 0){
+          console.log('FIzz')
+          }
+        else {
+          console.log(i)
+          }
+      
 
-        }
-    const year = Number(prompt("Enter a year:"));
-    alert(isLeapYear(year))
+      }
+    }
+      
+
+    fizzbuzz(numb);
+      
+
     
     }
 
