@@ -21,7 +21,7 @@
     .clock{
       width: 30rem;
       height: 30rem;
-      border: 2px solid white;
+      border: 2px solid black;
       border-radius: 50%;
       margin: 3rem auto;
       position: relative;
@@ -84,15 +84,19 @@
   const hourHand = document.querySelector('.hour-hand')
   function setDate() {
       const now = new Date();
+
       const seconds = now.getSeconds()
       const minutes = now.getMinutes()
       const hours = now.getHours()
+
       const secondsDegrees = ((seconds/60)*360)+90
       const minuteDegrees = ((minutes/60)*360)+90
       const hourDegrees = ((hours/12)*360)+90
+
       console.log(seconds)
       console.log(minutes)
       console.log(hours)
+
       secondHand.style.transform = `rotate(${secondsDegrees}deg)`; 
       minuteHand.style.transform = `rotate(${minuteDegrees}deg)`; 
       hourHand.style.transform = `rotate(${hourDegrees}deg)`; 
