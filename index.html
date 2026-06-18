@@ -17,6 +17,7 @@
       flex: 1;
       min-height: 100vh;
       align-items: center;
+      background-color: rgba(0, 110, 255, 0.651);
       }
     .clock{
       width: 30rem;
@@ -26,6 +27,7 @@
       margin: 3rem auto;
       position: relative;
       padding: 2rem;
+      background-color: rgba(255, 228, 196, 0.89);
       }
     .clock-face{
             position: relative;
@@ -117,7 +119,7 @@
         hourHand.style.transform = `rotate(${hoursDegrees}deg)`; 
 
     }
-
+    setDate();
     setInterval(setDate,1000);
   </script>
 </body>
