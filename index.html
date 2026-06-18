@@ -70,6 +70,14 @@
           
 
         }
+      .dot{
+            background: red;
+            position:absolute;
+            top: 50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+
+      }
       
 
 
@@ -80,6 +88,8 @@
   <div class="clock">
 
     <div class="clock-face">
+
+      <div class="dot"> * </div>
 
       <div class="hour-hand"> </div>
       <div class="minute-hand"> </div>
@@ -99,6 +109,7 @@
     const secondHand = document.querySelector('.second-hand')
     const minuteHand = document.querySelector('.minute-hand')
     const hourHand = document.querySelector('.hour-hand')
+    const dot = document.querySelector('.dot');
     function setDate() {
         const now = new Date();
 
@@ -114,6 +125,7 @@
         console.log(minutes)
         console.log(hours)
 
+        dot.style.transform = `rotate(${secondsDegrees}deg)`;
         secondHand.style.transform = `rotate(${secondsDegrees}deg)`; 
         minuteHand.style.transform = `rotate(${minutesDegrees}deg)`; 
         hourHand.style.transform = `rotate(${hoursDegrees}deg)`; 
